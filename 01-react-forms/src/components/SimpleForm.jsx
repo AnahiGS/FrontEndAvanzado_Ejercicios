@@ -5,12 +5,13 @@ const SimpleForm = () => {
   // Paso 1: Crear los estados donde se guardará la info que tecleamos
   const [email, setEmail] = useState('') // valores iniciales serán string vacío
   const [password, setPassword] = useState('')
-  //Paso 4: Manejar lo que va a suceder cuando se envie mi formulario
+  // Paso 4: Manejar lo que va a suceder cuando se envie mi formulario
   const handleSubmit = (event) => {
-    event.preventDefault() //evitar que se recargue la página y no rompa el SPA
-    console.log(email, password)
+    event.preventDefault() // evitar que se recargue la página y no rompa el SPA
+    const submittedData = JSON.stringify({ email, password })
+    console.log(submittedData)
   }
-  //Paso 2: Crear el formulario base en JSX
+  // Paso 2: Crear el formulario base en JSX
   return (
     <div className='login'>
       <div className='login-container'>
