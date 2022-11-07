@@ -11,7 +11,7 @@ const RefDom = () => {
 
   return (
     <div>
-        <input ref={inputRef} type='text'/>
+      <input ref={inputRef} type='text'/>
     </div>
   )
 }
