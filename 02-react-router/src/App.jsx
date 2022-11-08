@@ -1,15 +1,11 @@
 
 import './App.css'
-import Contacto from './pages/Contacto'
-import Home from './pages/Home'
-import Portafolio from './pages/Portafolio'
+import RoutesIndex from './routes'
 
 function App () {
   return (
-    <div className="App">
-      <Home />
-      <Portafolio />
-      <Contacto />
+    <div className='App'>
+      <RoutesIndex />
     </div>
   )
 }
