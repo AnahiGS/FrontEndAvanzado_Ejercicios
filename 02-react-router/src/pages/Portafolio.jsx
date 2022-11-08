@@ -5,7 +5,7 @@ const Portafolio = () => {
   return (
     <>
       <h1>Portafolio</h1>
-      
+
       <nav>
         <ul>
           <li>
