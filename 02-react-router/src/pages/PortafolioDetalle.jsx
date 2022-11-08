@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 
 const PortafolioDetalle = () => {
   const proyectos = [
@@ -8,11 +8,19 @@ const PortafolioDetalle = () => {
     { id: 3, nombre: 'Pokédex', desc: 'Consumir la PokéAPI y mostrar un listado de Pokémons con HTML, CSS, y JS ' }
   ]
   const { pid } = useParams()
+  const navigate = useNavigate()
   return (
     <>
       <h3>ID: {proyectos[pid-1].id}</h3>
       <h3>Nombre: {proyectos[pid-1].nombre}</h3>
       <h3>Descripción: {proyectos[pid-1].desc}</h3>
+      <button onClick={() => {
+        navigate('/portafolio')
+        // si quiero ir a la página anterior del historial: navigate(-1)
+      }}
+      >
+        Nos vamos al portafolio
+      </button>
     </>
   )
 }
